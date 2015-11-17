@@ -1,0 +1,32 @@
+{
+  "name": "divi-child-theme-init",
+  "version": "0.0.1",
+  "description": "Child theme template for Divi",
+  "main": "style.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyhqtran/divi-child-theme-init.git"
+  },
+  "author": "Andy Tran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andyhqtran/divi-child-theme-init/issues"
+  },
+  "homepage": "https://github.com/andyhqtran/divi-child-theme-init#readme",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.0.3",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-csscomb": "^3.1.0",
+    "grunt-notify": "^0.4.1",
+    "grunt-postcss": "^0.7.0",
+    "load-grunt-tasks": "^3.3.0"
+  }
+}
