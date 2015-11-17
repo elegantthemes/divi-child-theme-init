@@ -1,2 +1,1 @@
-# divi-child-theme-init
-Divi Child Theme Template
+# Divi Child Theme Template

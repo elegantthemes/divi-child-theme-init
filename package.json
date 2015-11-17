@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andyhqtran/divi-child-theme-init.git"
+    "url": "git+https://github.com/elegantthemes/divi-child-theme-init.git"
   },
   "author": "Andy Tran",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andyhqtran/divi-child-theme-init/issues"
+    "url": "https://github.com/elegantthemes/divi-child-theme-init/issues"
   },
-  "homepage": "https://github.com/andyhqtran/divi-child-theme-init#readme",
+  "homepage": "https://github.com/elegantthemes/divi-child-theme-init#readme",
   "dependencies": {
     "grunt": "^0.4.5"
   },
