@@ -34,8 +34,8 @@ After installing Node and Grunt, you can now install Git. If you already have it
 
 #### Step 4: Cloning Repo
 1. With git now installed, navigate to `wp-content/themes` folder.
-2. Clone the repo using the following command: `git clone git@github.com:andyhqtran/divi-child-tnit.git`.
-3. Now with the repo cloned, you can navigate to it.
+2. Clone the repo using the following command: `git clone git@github.com:andyhqtran/divi-child-theme-init.git`.
+3. Now with the repo cloned, you can navigate to it by typing in `cd ` and dragging the divi child theme folder into your terminal.
 3. Head over to step [#5](#step-5-installing-packages).
 
 -
