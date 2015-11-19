@@ -18,25 +18,54 @@ module.exports = function (grunt) {
 
     // Sass
     sass: {
+      options: {
+        precision: 6,
+        style: 'expanded',
+      },
+
       dev: {
         options: {
-          precision: 6,
-          sourcemap: 'auto',
-          style: 'expanded',
+          sourcemap: 'auto'
         },
         files: {
-          'style.css': 'styles/style.scss'
+          'style.css': 'styles/scss/style.scss'
         }
       },
 
       dist: {
         options: {
-          precision: 6,
-          sourcemap: false,
-          style: 'expanded',
+          sourcemap: false
         },
         files: {
-          'style.css': 'styles/style.scss'
+          'style.css': 'styles/scss/style.scss'
+        }
+      }
+    },
+
+    // Less
+    less: {
+      options: {
+        compress: false,
+        strictUnits: true
+      },
+
+      dev: {
+        options: {
+          sourceMap: true,
+          strictUnits: true
+        },
+        files: {
+          'style.css': 'styles/less/style.less'
+        }
+      },
+
+      dist: {
+        options: {
+          sourceMap: true,
+          strictUnits: true
+        },
+        files: {
+          'style.css': 'styles/less/style.less'
         }
       }
     },
@@ -120,6 +149,12 @@ module.exports = function (grunt) {
         options: {
           message: 'Sass files has been compiled.'
         }
+      },
+
+      less: {
+        options: {
+          message: 'Less files has been compiled.'
+        }
       }
     },
 
@@ -143,13 +178,22 @@ module.exports = function (grunt) {
       },
 
       sass: {
-        files: '*/**.{scss,sass}',
-        tasks: ['dev', 'notify:sass'],
+        files: '**/*.{scss,sass}',
+        tasks: ['sass-dev', 'notify:sass'],
+      },
+
+      less: {
+        files: '**/*.less',
+        tasks: ['less-dev', 'notify:less'],
       }
     }
   });
 
-  grunt.registerTask('dist', ['sass:dist', 'csscomb:dist', 'postcss:dist', 'cssmin:dist', 'notify:release', 'clean:release']);
-  grunt.registerTask('dev', ['sass:dev', 'postcss:dev']);
-  grunt.registerTask('default', ['notify:init', 'dev', 'watch']);
+  grunt.registerTask('sass-dist', ['sass:dist', 'csscomb:dist', 'postcss:dist', 'cssmin:dist', 'notify:release', 'clean:release']);
+  grunt.registerTask('sass-dev', ['sass:dev', 'postcss:dev']);
+
+  grunt.registerTask('less-dist', ['less:dist', 'csscomb:dist', 'postcss:dist', 'cssmin:dist', 'notify:release', 'clean:release']);
+  grunt.registerTask('less-dev', ['less:dev', 'postcss:dev']);
+
+  grunt.registerTask('default', ['notify:init', 'watch']);
 };

@@ -1,0 +1,34 @@
+/*
+ Theme Name:   Divi Child Theme
+ Theme URI:    http://elegantthemes.com/
+ Description:  Divi Child Theme
+ Author:       ElegantThemes
+ Author URI:   http://elegantthemes.com
+ Template:     Divi
+ Version:      0.0.1
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags: responsive-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, featured-images, full-width-template, post-formats, rtl-language-support, theme-options, threaded-comments, translation-ready
+ Text Domain:  divi-child-theme
+*/
+
+// Variables
+@import "base/variables";
+
+// Mixins
+@import "base/mixins";
+
+/* Body */
+body {}
+
+/* Header */
+@import "partials/header";
+
+/* Button */
+@import "partials/button";
+
+/* Input */
+@import "partials/input";
+
+/* Footer */
+@import "partials/footer";
