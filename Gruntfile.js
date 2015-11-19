@@ -6,14 +6,50 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    // Clean
     clean: {
       release: [
-        'package.json',
-        'bower.json', '.bowerrc',
-        '.gitignore', '.gitmodules',
-        'scss', '*.scss', '*.sass', '*.map', '.sass-cache',
-        'bower_components', 'Gruntfile.js', 'node_modules',
+        'package.json', '.DS_STORE',
+        'bower.json', '.bowerrc', 'bower_components',
+        '.gitignore', '.gitmodules', '.gitattributes',
+        'scss', '*.scss', '*.sass', '*.map', '.sass-cache', 'csscomb.json',
+        'Gruntfile.js', 'node_modules'
       ]
+    },
+
+    // Compress
+    compress: {
+      release : {
+        options : {
+          archive : '../<%= pkg.name %>.zip',
+          mode    : 'zip',
+          level   : 9
+        },
+        files : [
+          {
+            expand : true,
+            src : [
+              '**',
+              '!**/.git/**',
+              '!**/.gitignore',
+              '!**/.gitmodules',
+              '!**/.git',
+              '!**/.DS_STORE/**',
+              '!**/*.zip',
+              '!**/styles/**',
+              '!.sass-cache',
+              '!csscomb.json',
+              '!**/*.map',
+              '!**/.bowerrc',
+              '!**/bower.json',
+              '!**/node_modules/**',
+              '!**/package.json',
+              '!**/Gruntfile.js',
+            ],
+            dest : '<%= pkg.name %>'
+          }
+        ]
+      }
     },
 
     // Sass
@@ -189,10 +225,10 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('sass-dist', ['sass:dist', 'csscomb:dist', 'postcss:dist', 'cssmin:dist', 'notify:release', 'clean:release']);
+  grunt.registerTask('sass-dist', ['sass:dist', 'csscomb:dist', 'postcss:dist', 'cssmin:dist', 'notify:release', 'compress:release']);
   grunt.registerTask('sass-dev', ['sass:dev', 'postcss:dev']);
 
-  grunt.registerTask('less-dist', ['less:dist', 'csscomb:dist', 'postcss:dist', 'cssmin:dist', 'notify:release', 'clean:release']);
+  grunt.registerTask('less-dist', ['less:dist', 'csscomb:dist', 'postcss:dist', 'cssmin:dist', 'notify:release', 'compress:release']);
   grunt.registerTask('less-dev', ['less:dev', 'postcss:dev']);
 
   grunt.registerTask('default', ['notify:init', 'watch']);
