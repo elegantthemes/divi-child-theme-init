@@ -18,7 +18,8 @@ Now that you have the repo cloned or installed, you can start development.
 2. Open up `style.css` in your favorite editor and code away!
 
 
-## Preprocessor PathIf you want to speed up your development, you can choose one of the following preprocessors installed.
+## Preprocessor Path
+If you want to speed up your development, you can choose one of the following preprocessors installed.
 
 #### Requirements
 Below are a list of applications/software that you will need preinstalled before continuing down this path.
