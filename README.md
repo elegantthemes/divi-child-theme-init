@@ -1,5 +1,7 @@
 # Divi Child Theme Template
-This is a premade template for creating a Divi Child Theme.
+This is a premade template for creating a Divi Child Theme. This repo comes preinstalled with 3 different paths...
+- [CSS](#css-path)
+- [Preprocessor](#preprocessor-path)
 
 ## CSS Path
 If you don't have any experience working with preprocessors, this is the best path for you.
@@ -70,3 +72,6 @@ After installing Node and Grunt, you can now install Git. If you already have it
 #### Step 6: Running Grunt
 1. From the current directory, run the following command: `grunt`.
 2. Once grunt has been initiated, you can start your development.
+
+## Copyright & License
+Copyright 2015 ElegantThemes. Code released under the [GNU license](https://github.com/elegantthemes/divi-child-theme-init/blob/master/LICENSE).
