@@ -213,12 +213,12 @@ module.exports = function (grunt) {
 
       sass: {
         files: '**/*.{scss,sass}',
-        tasks: ['sass-dev', 'notify:sass'],
+        tasks: ['sass-build', 'notify:sass'],
       },
 
       less: {
         files: '**/*.less',
-        tasks: ['less-dev', 'notify:less'],
+        tasks: ['less-build', 'notify:less'],
       }
     }
   });
