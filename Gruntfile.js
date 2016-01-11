@@ -19,36 +19,34 @@ module.exports = function (grunt) {
 
     // Compress
     compress: {
-      release : {
-        options : {
-          archive : '../<%= pkg.name %>.zip',
-          mode    : 'zip',
-          level   : 9
+      release: {
+        options: {
+          archive: '../<%= pkg.name %>.zip',
+          mode: 'zip',
+          level: 9
         },
-        files : [
-          {
-            expand : true,
-            src : [
-              '**',
-              '!**/.git/**',
-              '!**/.gitignore',
-              '!**/.gitmodules',
-              '!**/.git',
-              '!**/.DS_STORE/**',
-              '!**/*.zip',
-              '!**/styles/**',
-              '!.sass-cache',
-              '!csscomb.json',
-              '!**/*.map',
-              '!**/.bowerrc',
-              '!**/bower.json',
-              '!**/node_modules/**',
-              '!**/package.json',
-              '!**/Gruntfile.js',
-            ],
-            dest : '<%= pkg.name %>'
-          }
-        ]
+        files: [{
+          expand: true,
+          src: [
+            '**',
+            '!**/.git/**',
+            '!**/.gitignore',
+            '!**/.gitmodules',
+            '!**/.git',
+            '!**/.DS_STORE/**',
+            '!**/*.zip',
+            '!**/styles/**',
+            '!.sass-cache',
+            '!csscomb.json',
+            '!**/*.map',
+            '!**/.bowerrc',
+            '!**/bower.json',
+            '!**/node_modules/**',
+            '!**/package.json',
+            '!**/Gruntfile.js',
+          ],
+          dest: '<%= pkg.name %>'
+        }]
       }
     },
 
@@ -225,11 +223,16 @@ module.exports = function (grunt) {
     }
   });
 
+  // Sass Tasks
+  grunt.registerTask('sass-build', ['sass:dev', 'postcss:dev']);
+  grunt.registerTask('sass-dev', ['sass-build', 'notify:init', 'watch:sass']);
   grunt.registerTask('sass-dist', ['sass:dist', 'csscomb:dist', 'postcss:dist', 'cssmin:dist', 'notify:release', 'compress:release']);
-  grunt.registerTask('sass-dev', ['sass:dev', 'postcss:dev']);
 
+  // Less Tasks
+  grunt.registerTask('less-build', ['less:dev', 'postcss:dev']);
+  grunt.registerTask('less-dev', ['less-build', 'notify:init', 'watch:less']);
   grunt.registerTask('less-dist', ['less:dist', 'csscomb:dist', 'postcss:dist', 'cssmin:dist', 'notify:release', 'compress:release']);
-  grunt.registerTask('less-dev', ['less:dev', 'postcss:dev']);
 
+  // Default Task
   grunt.registerTask('default', ['notify:init', 'watch']);
 };
