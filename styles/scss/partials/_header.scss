@@ -175,3 +175,42 @@
     }
   }
 }
+
+/* Vertical Navigation */
+.et_vertical_nav {}
+
+/* Header Style */
+.et_header_style {
+  &_right {}
+
+  &_left {}
+
+  &_split {}
+
+  &_slide {
+    &.et_pb_no_top_bar_fullscreen {}
+  }
+
+  &_centered {}
+
+  &_fullscreen {
+    &.et_pb_no_top_bar_fullscreen {}
+  }
+}
+
+/* Fullwidth Header */
+.et_fullwidth_nav {}
+
+/* Hide Header */
+.et_hide_nav {}
+
+/* Hide Logo */
+.et_hide_primary_logo {}
+
+.et_hide_fixed_logo {}
+
+/* Fullwidth Top Header */
+.et_fullwidth_secondary_nav {}
+
+/* Hide Search Icon */
+.et_hide_search_icon {}
