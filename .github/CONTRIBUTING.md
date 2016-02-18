@@ -1,0 +1,1 @@
+# Contributing to Divi Child Theme Init
