@@ -7,7 +7,7 @@ This is a premade template for creating a Divi Child Theme. This repo comes prei
 If you don't have any experience working with preprocessors, this is the best path for you.
 
 #### Step 1: Cloning the Repo
-The first step to getting start with building a child theme is cloning this repo. If you don't have [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed, you can download the [ZIP file](https://github.com/elegantthemes/Edition/archive/master.zip) and drop it into your `wp-content/themes` folder.
+The first step to getting start with building a child theme is cloning this repo. If you don't have [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed, you can download the [ZIP file](https://github.com/elegantthemes/divi-child-theme-init/archive/master.zip) and drop it into your `wp-content/themes` folder.
 
 1. Let's start by navigating to your `wp-content/themes` folder instead your WordPress directory.
 2. Once you're there, open `terminal` in the current folder.
